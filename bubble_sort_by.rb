@@ -5,9 +5,7 @@ def bubble_sort (array)
 		sorted = true
 		(0..n).each do |index|
 			if yield(array[index], array[index+1]) > 0
-				temp = array[index]
-				array[index] = array[index+1]
-				array[index+1] = temp
+				array[index], array[index+1] = array[index+1], array[index]
 				sorted = false
 			end
 		end
